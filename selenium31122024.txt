@@ -1,0 +1,95 @@
+1.jdk[1.8 & above]
+2.Eclipse[Mars, Neon, Oxygen]
+3.Selenium jar file
+4.Driver executable files
+5.Latest version of browsers
+6. Application Under Testing
+===============================================================================
+1.jdk(« PreviousNext »Java JDK 1.8 Installation Steps  on windows(https://www.oracle.com/in/java/technologies/downloads/)
+
+To check window cmd -java-version
+
+step 1:jdk dw
+step 2:www.oracle.com
+step 3:java achive
+step 4:version dw(jdk[1.8 & above])
+================================================================================
+2.Eclipse[Mars, Neon, Oxygen]
+https://wiki.eclipse.org/Eclipse/Installation/
+
+3.Selenium jar file
+https://support.smartbear.com/alertsite/docs/monitors/web/selenium/create-runnable-jar-from-selenium-script-using-eclipse.html
+================================================================================
+Methods webdriver(https://medium.com/@priyankagour/all-about-selenium-webdriver-commands-1096a905df11)
+
+1.get()-----      To get url  ---------------------                             driver.get(“www.javatpoint.com")
+2.getTitle()-to   get current webpage title-----                                String Title = driver.getTitle();
+3.getPageSource()--- to get current page source for webpage ---                 String PageSource = driver.getPageSource();
+4.findElement()-----to get single  webelement ------------------                WebElement element = driver.findElement(By.id(“medium-id”));
+5.findElements()----To get multi  webselement-------------------                List<WebElement> listOfElements = driver.findElements(By.xpath("//div"));
+6.getWindowHandle()---- To get the id of parent window--                        String windowHandle=driver.getWindowHandle();
+7.getWindowHandles()----To get the id of all windows--                          Set<String> handle=driver.getWindowHandles(); 
+8.switchTo()----------manage cookies,window--                                   driver.switchTo().window("windowName")----used to achive for(String handle:driver.getWindowHandles()){driver.swichTo().window(handle);}
+9.navigate()----------navigate to next page,previouse page,enter the url,---    driver.navigate().to(“https://facebook.com");
+10.getCurrentUrl()----to get the current url ===tring                           CurrentUrl = driver.getCurrentUrl();
+11.clear() --- Clearing User inputs============                                 driver.findElement(By.name(“q”)).clear();
+12.click()----- Performing Click event=========                                 driver.findElement(By.id(“button-id”)).click();
+13.navigate().back()--- Navigating backward in browser history                  driver.navigate().back();
+14.navigate().forward()--navigating forward in browser history                  driver.navigate().forward();
+15.navigate().refresh()--refresh/reload a web page -------                      navigate().refresh();
+16.close()---closing current browser--------                                    driver.close();
+17.quit()----closing browser and other all other windows associated with the    driver---- driver.quit();
+
+18.switchTo().frame()--- Moving between Frames -Index---                       driver.switchTo().frame(1); //Switches to the frame with index number 1
+19.switchTo().frame()--- Moving between Frames -Id------                       driver.switchTo().frame(“resultframe”); //Switches the frame where the value of id
+20.switchTo().frame()--Web Element -Moving between Frames--WebElement iframeElement--- driver.findElement(By.id(“resultframe”)); driver.switchTo().frame(iframeElement);
+Action class
+Action class is a built-in ability to handle various types of keyboard and mouse events.
+21.sendKeys(keystosend)
+22.isSeleted --  used to acitve or selected for checkbox,seleted combobax,--- its return ture its work currectly and flase not working;
+
+WebElement lang=driver.findElement(By.id("Language"));
+boolean is_seleted=lang.isSeleted();
+
+23.Submit() --if click the sumit button its waiting for next page.
+WebElement submit_form=driver.findElement(By.id("Submit"));
+submit_form.submit();
+24.GetTagName
+getTagName( ) method provides the tag name of the associated element.
+
+It’ll return the tag name i.e. “input“ of the element. e.g. <input name=”Password”/>.
+
+
+============ ==================================================================
+element:
+The HTML element is everything from the start tag to the end tag:
+<tagname>Content goes here...</tagname>
+
+tag:
+<div>	Defines a section in a document
+<dl>	Defines a description list
+<dt>	Defines a term/name in a description list
+<em>	Defines emphasized text 
+<embed>	Defines a container for an external application
+-------------------------------------------------------------------------
+basic webform test the selenium 
+
+https://www.selenium.dev/documentation/webdriver/getting_started/first_script/
+
+
+
+
+How to use Selenium with Java?
+To use Selenium with Java Tutorial, we need to follow these steps:
+
+Download and install Java Development Kit (JDK) on your machine.
+Download the Selenium Java Client Driver from the official Selenium website.
+Set up an Integrated Development Environment (IDE) like Eclipse or IntelliJ
+Create a Java project in your IDE.
+Add the Selenium Java Client Driver to your project’s classpath.
+Write your Selenium test code using Java.
+Run your test code.(https://testgrid.io/blog/selenium-with-java-tutorial/)
+
+
+simple webform for keyboard class 
+https://toolsqa.com/selenium-webdriver/keyboard-events-in-selenium/
